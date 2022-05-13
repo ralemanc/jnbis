@@ -6,6 +6,7 @@ import org.jnbis.api.model.record.TransactionInformation;
 import org.jnbis.api.model.record.TransactionInformation.InfoDesignation;
 import org.jnbis.api.model.record.TransactionInformation.TransactionContent;
 import org.jnbis.api.model.record.UserDefinedDescriptiveText;
+import org.jnbis.api.model.record.FacialAndSmtImage;
 import org.jnbis.api.model.record.VariableResolutionFingerprint;
 import org.jnbis.internal.NistHelper.RecordType;
 import org.jnbis.internal.record.BaseRecord;
@@ -58,5 +59,6 @@ public abstract class NistBuilder {
     public abstract NistBuilder transactionInfo(TransactionInformation type1);
     public abstract NistBuilder add(UserDefinedDescriptiveText type2);
     public abstract NistBuilder add(HighResolutionGrayscaleFingerprint type4);
+    public abstract NistBuilder add(FacialAndSmtImage type10);
     public abstract NistBuilder add(VariableResolutionFingerprint type14);
 }
