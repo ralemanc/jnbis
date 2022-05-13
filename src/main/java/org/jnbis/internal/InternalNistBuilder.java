@@ -5,10 +5,7 @@ import java.util.Date;
 import org.jnbis.api.handler.NistBuilder;
 import org.jnbis.api.handler.NistHandler;
 import org.jnbis.api.model.Nist;
-import org.jnbis.api.model.record.HighResolutionGrayscaleFingerprint;
-import org.jnbis.api.model.record.TransactionInformation;
-import org.jnbis.api.model.record.UserDefinedDescriptiveText;
-import org.jnbis.api.model.record.VariableResolutionFingerprint;
+import org.jnbis.api.model.record.*;
 import org.jnbis.internal.NistHelper.RecordType;
 
 public class InternalNistBuilder extends NistBuilder {
@@ -47,6 +44,14 @@ public class InternalNistBuilder extends NistBuilder {
         updateTransactionContent(RecordType.RT4_HR_GS_FINGERPRINT, type4);
         return this;
     }
+
+    @Override
+    public NistBuilder add(FacialAndSmtImage type10) {
+        nist.addFacialSmtImage(type10);
+        updateTransactionContent(RecordType.RT10_FACIAL_N_SMT_IMAGE_DATA, type10);
+        return this;
+    }
+
 
     @Override
     public NistBuilder add(VariableResolutionFingerprint type14) {

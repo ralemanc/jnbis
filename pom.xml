@@ -10,7 +10,7 @@
 
     <groupId>com.github.thomasdav</groupId>
     <artifactId>jnbis</artifactId>
-    <version>3.0.9</version>
+    <version>3.0.10</version>
 
     <packaging>jar</packaging>
 
